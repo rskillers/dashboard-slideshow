@@ -1,0 +1,22 @@
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    min-height: 800px;
+}
+
+.slideshow-container > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+}
+
+.slideshow-container > div.slide-active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+}

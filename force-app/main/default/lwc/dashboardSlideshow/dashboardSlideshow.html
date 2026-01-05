@@ -1,0 +1,16 @@
+<template>
+    <div class="slideshow-container">
+        <template for:each={dashboards} for:item="dashboard">
+            <div key={dashboard.key} class={dashboard.className} data-dashboard={dashboard.id}>
+                <wave-wave-dashboard-lwc
+                    dashboard={dashboard.id}
+                    height={height}
+                    show-title={showTitle}
+                    show-sharing={showSharing}
+                    show-header={showHeader}
+                    open-location="OPEN_IN_TAB">
+                </wave-wave-dashboard-lwc>
+            </div>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>analytics__Dashboard</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage,lightning__RecordPage,lightning__HomePage,analytics__Dashboard">
+            <property name="dashboardIds" type="String" default="" 
+                      label="Dashboard IDs (comma-separated)" 
+                      description="Enter dashboard IDs separated by commas (e.g., 0FKxx000000001,0FKxx000000002,0FKxx000000003)" />
+            <property name="intervalSeconds" type="Integer" default="10" 
+                      label="Interval (seconds)" 
+                      description="Time in seconds between dashboard transitions" />
+            <property name="height" type="String" default="800" 
+                      label="Height (px)" 
+                      description="Dashboard height in pixels" />
+            <property name="showTitle" type="Boolean" default="false" 
+                      label="Show Title" />
+            <property name="showSharing" type="Boolean" default="false" 
+                      label="Show Sharing" />
+            <property name="showHeader" type="Boolean" default="false" 
+                      label="Show Header" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
